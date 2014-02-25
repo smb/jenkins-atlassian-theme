@@ -58,11 +58,12 @@ img {
 }
 
 #top-panel td > a {
-  background: url("jenkins_logo.png") 0 no-repeat;
+  background: url("/logo.png") 0 no-repeat;
   display: block;
-  width: 330px;
+  width: 170px;
   height: 40px;
-  margin: 0px 0 0px 10px; 
+  background-size: 100%;
+  margin: 10px 0 10px 10px; 
 }
 
 #top-panel td > a img {
