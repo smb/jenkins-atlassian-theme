@@ -338,7 +338,7 @@ input[name='j_username'], input[name='j_password'] {
 }
 
 /* Console output */ 
-body>pre,#main-panel>pre {
+.console-output {
     font-size:14px;
     background-color:#393939;
     color:#b5c4d0;
@@ -412,4 +412,11 @@ tr.permission-row:nth-child(even) {
   background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
   background-image: -webkit-radial-gradient(3px 3px, circle cover, #f0ad4e, #d58512);
   background-image: radial-gradient(circle at 3px 3px, #f0ad4e 0%, #d58512 100%);
+}
+
+#console-outline-body > li {
+  overflow: hidden;
+  text-overflow:
+  ellipsis; white-space: nowrap;
+  width: 300px;
 }
