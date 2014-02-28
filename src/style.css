@@ -415,9 +415,23 @@ tr.permission-row:nth-child(even) {
   background-image: radial-gradient(circle at 3px 3px, #f0ad4e 0%, #d58512 100%);
 }
 
-#console-outline-body > li {
+#console-outline-body > li 
+{
   overflow: hidden;
   text-overflow:
   ellipsis; white-space: nowrap;
   width: 300px;
 }
+
+#buildHistory {
+	table-layout: fixed
+}
+
+#buildHistory > tbody > tr > td.desc 
+{
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  width: 50px;
+}
+
