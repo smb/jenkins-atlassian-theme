@@ -684,6 +684,10 @@ jQuery(function($){
         return path.match(/^\/job\/.*?\//) !== null;
     };
 
+    var isConfiguration = function(path) {
+        return path.match(/^\/job\/.*?\/configure/) !== null;
+    }
+
     /**
      * This is a little tricky because it needs to match either the homepage or
      * a page with configuration. The configuration check is for an equals sign
@@ -902,6 +906,7 @@ jQuery(function($){
         var button = document.createElement('button');
         button.className = "btn btn-primary doony-build";
         button.innerHTML = "Build Now";
+	button.hide();
         $(button).click(function() {
             var jobUrl = getRootJobUrl(window.location.pathname);
             // The build post endpoint doesn't tell you the number of the next
@@ -924,6 +929,12 @@ jQuery(function($){
                 });
             });
         });
+
+	//$('#parameters input').attr('readonly', 'true');
+	if(!isConfiguration(window.location.pathname)) {
+	    $('.setting-input   ').attr('readonly', true);
+    	    $('.setting-input   ').addClass('input-disabled');
+        }
 
         $(document).on('click', '#doony-clear-build', function(e) {
             e.preventDefault();

@@ -435,3 +435,4 @@ tr.permission-row:nth-child(even) {
   width: 50px;
 }
 
+.input-disabled{background-color:#EBEBE4;border:1px solid #ABADB3;padding:2px 1px;}
